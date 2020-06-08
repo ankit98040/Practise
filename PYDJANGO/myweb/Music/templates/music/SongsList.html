@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Songs List</title>
+</head>
+<body>
+<center>
+    <h2>Here is a list of songs </h2>
+    {% for i in songs %}
+        <p>{{ i.title }}</p>
+    {% endfor %}
+</center>
+
+</body>
+</html>

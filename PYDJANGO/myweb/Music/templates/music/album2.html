@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>album list</title>
+    <style>
+        button{
+            background-color: lightblue;
+           }
+    </style>
+</head>
+<body>
+<a>
+    <center>
+    {% if request.user.is_authenticated %}
+        <a href="{% url 'logout' %}"><p>{{request.user}}  - Log-Out</p></a>
+    {% else %}
+        <a href="{% url 'login' 'album' %}"<p>LOG-IN</p></a>
+    {% endif %}
+
+    <h3>List of all the albums</h3>
+    {% for album in albums %}
+    <br>
+<a href="{% url 'details' album.id %}" <span style="font-size: 30px; font-family: fantasy; padding-bottom:200px;">{{ album.artist }}</span></a>
+
+<a href="{% url 'deleteAlbum' album.id %}"> <img width = "15" src="https://cdn1.iconfinder.com/data/icons/ios-and-android-line-set-2/52/delete__remove__trash__dustbin-512.png"></a> &nbsp;
+<a href="{% url 'editAlbum' album.id %}"> <img width = "15" src="https://cdn2.vectorstock.com/i/1000x1000/43/51/pencil-icon-vector-21894351.jpg"></a>
+    {% endfor%}
+
+
+    <br>
+    <a href="{% url 'Allsongs' %}" ><button style="border-radius: 20px; padding: 10px 10px 10px 10px">Songs List</button></a>
+
+    <a href="{% url 'Allcolleges' %}" ><button style="border-radius: 20px; padding: 10px 10px 10px 10px">College List</button></a>
+
+    <a href="{% url 'addAlbum' %}" ><button style="border-radius: 20px; padding: 10px 10px 10px 10px">Add Album</button></a>
+
+    <a href="{% url 'addSong' %}" ><button style="border-radius: 20px; padding: 10px 10px 10px 10px">Add New Song</button></a>
+
+
+</center>
+
+</body>
+</html>

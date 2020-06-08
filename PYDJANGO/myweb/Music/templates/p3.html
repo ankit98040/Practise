@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic styling</title>
+	<style type="text/css">
+		body{
+			font-family: arial;
+			font-size: 13px;
+
+    	background-color: gray;
+    	background-image: url("https://images.unsplash.com/photo-1539946309076-4daf2ea73899?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9");
+
+
+		}
+
+		h1,p {
+			color: red;
+			/*visibility: hidden;*/
+			/*display: none;
+			display: inline;*/
+
+		}
+
+		/*h3 {
+			color: red;
+			}*/
+
+		.text-center{
+			color: blue;
+			text-align: center;
+		}
+		#box1{
+			background-color: black;
+			color: white;
+			width: 200px;
+			padding: 20px 20px;
+			margin: 15px 15px;
+			border-width: 4px;
+			border-color: red;
+			border-style: solid;
+			float: left;
+			transition: width 2s;
+			transition-timing-function: ease-out;
+			border-radius: 50px;
+		}
+		#box1:hover{
+			width: 900px;
+		}
+		#box2{
+			background-color: navy;
+			color: white;
+			width: 200px;
+			padding: 40px 20px 10px 50px;
+			margin: 20px;
+			border: 4px green solid;
+			float: right;
+			transition: width 2s;
+			transition-timing-function: ease-in;
+			border-radius: 50px;
+		}
+		#box2:hover{
+			width: 900px;
+		}
+		.clr{
+			clear: both;
+		}
+		ul.mylist{
+			list-style: none;
+			padding: 0;
+			line-height: 2.2em;
+		}
+		ul.mylist li{
+			border-bottom: 1px dotted gray;
+		}
+	</style>
+</head>
+<body>
+	<div class="text-center">
+		<h1>welcome</h1>
+		<p class="text-center">hello guys good morning</p>
+		<p>hows your quarantine going ? </p>
+	</div>
+
+	<div id="box1">
+		this is box1
+	</div>
+
+	<div id="box2">
+		this is box2
+	</div>
+
+	<div class="clr"></div>
+
+	<div>hello</div>
+
+	<ul class="mylist">
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+		<li>List item</li>
+	</ul>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login page</title>
+    <style>
+    	body{
+    	background-color: gray;
+    	background-image: url("https://images.unsplash.com/photo-1539946309076-4daf2ea73899?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9");
+    	}
+    	a{
+    	color:white;
+    	font-size: 25px;
+    	}
+        h2{
+        background-color: blue;
+        color: black;
+        width: 150px;
+        box-shadow: 10px 3px 15px ;
+        border-radius: 15px;
+        }
+        img{
+        	border-radius: 50px;
+        	box-shadow: 10px 5px 8px;
+        	padding 4px 4px 4px 4px;
+        }
+        form{
+        color:blue;
+        }
+        button{
+        padding: 15px 15px; border-radius: 15px; color:white; background-color: navy;
+        }
+
+        button:hover{
+        	background-color: darkorange;
+        	cursor: pointer;
+        	color:blue;
+        }
+        .but1:hover{
+        	background-color: transparent;
+        	color: red;
+        	}
+    </style>
+</head>
+
+<body>
+	<center>
+		<h2 style="font-family: American Typewriter">LOGIN FORM</h2>
+		<form>
+			Username: <br><input type="text" name="username" placeholder="Username" required><br><br>
+			Password: <br><input type="password" name="password" placeholder="Password" required><br><br>
+			Email: <br><input type="email" name="email" placeholder="Email ID"><br><br>
+			<button>Register Now</button>
+		</form>
+
+		<a href="{% url 'pg2' %}"><button class="but1">Jetix</button></a>
+		<a href="{% url 'pg4' %}"><button>cn</button></a>
+		<a href="{% url 'pg3' %}"><button>hungama</button></a>
+		<a href="{% url 'pg4' %}"><button>mypage</button></a>
+		<br>
+
+		<a href="https://google.com"><img src="https://vignette.wikia.nocookie.net/marvelmovies/images/0/0e/Endgame_Character_Posters_01.jpg/revision/latest/scale-to-width-down/340?cb=20190326174327" width="240px" height="320px"></a><br>
+		<ul style="list-style-type: none">
+			{% for name,url in names %}
+				<a href="{{ url }}"><li>{{ name }}</li> </a>
+			{% endfor %}
+		</ul>
+	</center>
+
+</body>
+</html>

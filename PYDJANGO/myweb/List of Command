@@ -1,0 +1,20 @@
+create project: django-admin startproject projectname
+
+DATABASE:
+if we have to create tables/ models
+
+after creating tables:
+1. you have to convert these tables(models) in data commands (database files)
+2. you have to apply all tableson your data base file. (db.sqlite3)
+    apply data tables: python manage.py migrate
+
+    add user
+
+    python manage.py createsuperuser        #ankit1/Rockstar
+    python manage.py startapp appname
+
+    create data tables:
+    1. define class( table) in models.py file
+    2. generate migrations  python manage.py makemigrations Music
+    3. migrations on database:  python manage.py migrate
+    image library

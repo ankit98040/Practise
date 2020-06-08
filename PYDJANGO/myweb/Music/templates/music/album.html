@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>album list</title>
+</head>
+<body>
+<center>
+    <h3>List of all the albums</h3>
+    {% for album in albums %}
+    <br>
+    <img src = "{{ album.image }}" style="width: 450px; border-radius: 30px"
+         <br>
+    <span style="font-size: 30px; font-family: fantasy; padding-bottom:200px;">{{ album.name }}</span><br>
+    {% endfor %}
+
+    <br>
+    <a href="{% url 'Allsongs' %}" ><button style="border-radius: 20px; padding: 10px 10px 10px 10px">Songs List</button></a>
+
+</center>
+
+</body>
+</html>

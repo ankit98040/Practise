@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Labum</title>
+    <style>
+        .Input{
+        width: 250px;
+        height: 25px;
+        border-color: darkorange;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        }
+        h1{
+         font-family: fantasy;
+         }
+    </style>
+</head>
+<body>
+<center>
+    <h1>Add New Album</h1>
+    <form method="post" action="" enctype = "multipart/form-data">{% csrf_token %}
+        {{ form.name }}
+        {{ form.artist }}
+        {{ form.image }}
+        <button type="submit" class="Input">Add New Album</button>
+    </form>
+</center>
+
+
+<br><br>
+
+<form action="{% url 'SubscribeUs' %}" mathod="post">{% csrf_token %}
+    <input type="text" class="Input">
+</form>
+
+
+</body>
+</html>

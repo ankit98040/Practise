@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Colleges</title>
+    <style>
+    body,h2{
+    font-family: fantasy
+    }
+    </style>
+</head>
+<body>
+    {% for x in college %}
+        <p>{{ x.name }}</p>
+    {% endfor %}
+</body>
+</html>

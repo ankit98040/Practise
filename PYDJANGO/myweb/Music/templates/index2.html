@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME</title>
+</head>
+<body>
+    <center>
+        <h1>List of Ankit students</h1>
+        {% for s in data %}
+            <a href="{% url 'students' s %}"> <span>{{ forloop.counter0 }} {{ s }}</span><br></a>
+        {% endfor %}
+    </center>
+</body>
+</html>

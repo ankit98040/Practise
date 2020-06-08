@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>transitions and animations</title>
+	<style type="text/css">
+	body{
+    	background-color: gray;
+    	background-image: url("https://images.unsplash.com/photo-1539946309076-4daf2ea73899?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9");
+
+    	}
+		#box1{
+			width: 100px;
+			height: 100px;
+			background: #696969;
+			transition: width 2s, height 2s;
+			/*transition-delay: 1s;*/
+			transition-timing-function: ease-out;
+			border-radius: 50%;
+			animation-name: colorchange;
+			animation-duration: 5s;
+		}
+		#box1:hover{
+			width: 900px;
+			height: 900px
+		}
+
+		#box2{
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			animation-name: colorchange;
+			animation-duration: 5s;
+			position: relative;
+			/*
+			animation-iteration-count: 3;
+			animation-direction: reverse;*/
+		}
+		/*@keyframes colorchange{
+			from {background-color: #696969}
+			to {background-color: red}
+		}*/
+
+		@keyframes colorchange{
+			0%{background-color: red; left: 0px; top: 0px;}
+			25%{background-color: yellow; left: 0px; top: 200px;}
+			50%{background-color: blue; left: 200px; top: 200px;}
+			75%{background-color: orange; left: 200px; top: 0px;}
+			100%{background-color: green; left: 0px; top: 0px;}
+		}
+
+		button{
+        padding: 15px 15px; border-radius: 15px; color:white; background-color: navy;
+        }
+
+        button:hover{
+        	background-color: darkorange;
+        	cursor: pointer;
+        }
+	</style>
+</head>
+<body>
+
+		<a href="http://127.0.0.1:8000/jetix"><button>Jetix</button></a>
+		<a href="http://127.0.0.1:8000/myhome"><button>Home</button></a>
+		<a href="http://127.0.0.1:8000/hungama"><button>hungama</button></a>
+		<a href="http://127.0.0.1:8000/mypage"><button>mypage</button></a>
+	<div id="box1"></div>
+	<div id="box2"></div>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        h1,body{
+        font-family: fantasy;
+        }
+        p{
+        font-family: american-typewriter;
+        color: red;
+
+        }
+        .Input{
+        width: 250px;
+        height: 25px;
+        border-color: darkorange;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<center>
+    <h1>User Login</h1>
+
+    <form method = "post" action="" enctype="multipart/form-data">{% csrf_token %}
+        {% if error %}
+            <p>Username or Password is Incorrect</p>
+
+            USERNAME: <br>
+            <input type="text" class="Input" placeholder="Username" required name="un" value="{{ last_un }}"> &nbsp; <a href="{% url 'login' location %}"> Not You ? </a><br>
+
+            PASSWORD: <br>
+            <input type="password" class="Input" placeholder="Password" required name="ps" autofocus>
+
+
+        {% else %}
+            USERNAME: <br>
+            <input type="text" class="Input" placeholder="Username" required name="un"><br>
+
+            PASSWORD: <br>
+            <input type="password" class="Input" placeholder="Password" required name="ps">
+
+        {% endif %}
+
+
+
+        <br><button type="submit" class="Input">LOG IN</button><br><br>
+    </form>
+
+    <a href="{% url 'register' %}">New User ?</a>
+</center>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{% load static %}
+	<title>columns and flex box</title>
+	<style type="text/css">
+	body{
+    	background-color: gray;
+    	background-image: url("https://images.unsplash.com/photo-1539946309076-4daf2ea73899?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjEyMDd9");
+
+    	}
+    	button{
+        padding: 15px 15px; border-radius: 15px; color:white; background-color: navy;
+        }
+
+        button:hover{
+        	background-color: darkorange;
+        	cursor: pointer;
+        	color:blue;
+        }
+        .but1:hover{
+        	background-color: transparent;
+        	color: red;
+        	}
+		article{
+			column-count: 4;
+			column-gap: 40px;
+			column-rule-style: solid;
+			column-rule-width: 1px;
+			column-rule-color: red;
+		}
+		article h1{
+			column-span: all;
+		}
+
+		.textbox1{
+			border: 2px solid;
+			padding: 20px;
+			width: 150px;
+			overflow: auto;
+			resize: both;
+		}
+		.flexcontainer{
+			width: 600px;
+			height: 400px;
+			background-color: lightblue;
+			display: flex;
+			/*flex-direction: column-reverse;*/
+			justify-content: space-between;
+		}
+
+		.flex-item{
+			background-color: red;
+			width: 80px;
+			height: 50px;
+			margin: 10px;
+		}
+		.first{
+			order:-1;
+		}
+
+	</style>
+</head>
+<body>
+
+	<a href="http://127.0.0.1:8000/jetix"><button class="but1">Jetix</button></a>
+		<a href="http://127.0.0.1:8000/cn"><button>cn</button></a>
+		<a href="http://127.0.0.1:8000/hungama"><button>hungama</button></a>
+		<a href="http://127.0.0.1:8000/myhome"><button>HOME</button></a>
+		<br>
+
+	<article>
+		<h1>COVID 19</h1>
+		COVID-19 (coronavirus disease 2019) is an infectious disease caused by severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2), previously known as the 2019 novel coronavirus (2019-nCoV), a strain of coronavirus. The first cases were seen in Wuhan, China, in late December 2019 before spreading globally 1,2,10. The current outbreak was officially recognized as a pandemic on 11 March 2020 44.Current imaging best practice advises that CT chest is not used to diagnose COVID-19, but maybe helpful in assessing for complications 115. The non-specific imaging findings are most commonly of atypical or organizing pneumonia, often with a bilateral, peripheral, and basal predominant distribution 32. No effective treatment or vaccine exists currently (April 2020) 20.
+	</article>
+
+	<br>
+
+	<img src="{% static 'b1.png' %}" height="300px" width="400px">
+
+	<br>
+
+	<div class="textbox1"> to resize the elements</div><br><br>
+
+	<div class="flexcontainer">
+		<div class="flex-item">flex item1</div>
+		<div class="flex-item">flex item2</div>
+		<div class="flex-item first">flex item3</div>
+		<div class="flex-item">flex item4</div>
+		<div class="flex-item">flex item5</div>
+
+	</div>
+	
+
+
+    <a href="index.html">Linkedin</a>
+</body>
+</html>

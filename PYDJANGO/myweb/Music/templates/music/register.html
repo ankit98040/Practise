@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+        h1,h4,body{
+        font-family: fantasy;
+        }
+        p{
+        font-family: american-typewriter;
+        color: red;
+
+        }
+        .Input{
+        width: 250px;
+        height: 25px;
+        border-color: darkorange;
+        border-radius: 25px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+<center>
+    <form method = "post" action="" enctype="multipart/form-data">{% csrf_token %}
+
+        <h1>Create New Account</h1>
+        <h4>Enter Your Details</h4>
+
+        NAME: <br>
+        <input type="text" class="Input" placeholder="Full Name" required name="name"><br>
+        USERNAME: <br>
+        <input type="text" class="Input" placeholder="Username" required name="un"><br>
+        EMAIL: <br>
+        <input type="text" class="Input" placeholder="Email" required name="email"><br>
+        PASSWORD: <br>
+        <input type="password" class="Input" placeholder="Password" required name="ps" autofocus><br>
+        CONFIRM PASSWORD: <br>
+        <input type="password" class="Input" placeholder="Confirm Password" required name="ps" autofocus>
+
+
+
+
+
+        <br><button type="submit" class="Input">REGISTER IN</button><br><br>
+    </form>
+
+    <a href="{% url 'login' %}">Already User ? Log In</a>
+</center>
+
+</body>
+</html>
